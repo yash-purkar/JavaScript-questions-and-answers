@@ -1,6 +1,5 @@
 // Currying is a function that takes one argument at a time and returns a new function expecting the next argument.
 
-// Without currying
 
 function currying(a) {
   return function (b) {
@@ -9,7 +8,6 @@ function currying(a) {
     }
   }
 }
-//  without currying
 let a1 = currying(5);
 // console.log(a1);
 
