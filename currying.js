@@ -21,9 +21,7 @@ let a3 = a2(3);
 
 // We can see in console the currying function is returning a function and that function also returning the another function and inside this we are returning sum of the numbers.
 
-// So We can see if we pass an argument to currying() it is returning an another function we stored that function inside a1;
-// So that another function is taking an argument , no we stored that function in a1, so we passed the argument to a1. Now that function was called, and that this function is also returning an another function so we stored that another function in a2, And now this function is returning the sum of the numbers.
-// i.e 15
+// So We can see if we pass an argument to currying() it is returning another function we stored that function inside a1, // So that another function is taking an argument, and returning another function so we stored that function in a2, and that another function expects the one argument and returns the sum of the numbers, and we stored that sum inside a3.
 
 
 
@@ -32,7 +30,7 @@ let a3 = a2(3);
 // We can do by simple way using currying;
 
 let total = currying(5)(7)(3);
-// console.log(total);
+console.log(total);
 
 // Now the 5 will assign to the a, now the currying function returning the another function and that function is taking an argument so the 7 will assign to b, now this function is also returning the another function and taking ane one argument so 3 will assign to c.
 // Then c will return the sum of the numbers that will be 15/
