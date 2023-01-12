@@ -7,7 +7,7 @@
 function printNums(a, b, ...other) {
 
   console.log(a, b);
-  console.log(remaining);
+  console.log(other);
 }
 printNums(1, 2, 20, 30, 40);
 
