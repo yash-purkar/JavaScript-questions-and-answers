@@ -180,11 +180,85 @@ console.log(mg1.info());
 
 // suppose emp class has msg() method and manager class also has msg() then how to access?
 
-    // FOR emp method USE 
-    // super.msg()
-    // And for manager method use
-    // this.msg() 
+// FOR emp method USE 
+// super.msg()
+// And for manager method use
+// this.msg() 
 
 
 
-    // Now if create another class "admin" and with that class we extends manager so the "admin" class will have access to properties and methods of manager class and also emp class, emp class because we extended that class with manager.
+// Now if create another class "admin" and with that class we extends manager so the "admin" class will have access to properties and methods of manager class and also emp class, emp class because we extended that class with manager.
+
+
+
+
+
+
+
+// 
+let student = {
+  fName: "aditya",
+  lName: "Sharma"
+}
+
+let student2 = {
+  fName: "aditya2",
+  lName: "Sharma2"
+}
+
+function Student(f, l) {
+  this.fName = f;
+  this.lName = l;
+}
+
+Student.prototype.nationality = "Indian"
+
+let student3 = new Student("Aditya3", "sharma3");
+let student4 = new Student("Aditya3", "sharma3");
+let student5 = new Student("Aditya3", "sharma3");
+let student6 = new Student("Aditya3", "sharma3");
+
+console.log(student2)
+console.log(student3)
+
+// The constructor data property of an Object instance returns a reference to the constructor function that created the instance object.
+
+
+class students {
+  constructor() {
+    console.log("called")
+  }
+  getMsg() {
+    console.log("Hii")
+  }
+}
+
+class std extends students {
+  constructor() {
+    super();
+    console.log("std constructor")
+  }
+  getMsg() {
+    console.log("std getMsg")
+  }
+  info() {
+    super.getMsg()
+  }
+}
+
+let std1 = new std();
+std1.info();
+
+// Constructor
+// A JavaScript constructor method is a special type of method which is used to initialize and create an object. It is called when memory is allocated for an object.
+
+// Class
+// Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are unique to classes.
+// e.g
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+let a = new Rectangle(25, 30);
