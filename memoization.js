@@ -2,12 +2,12 @@
 
 
 
-let sum = 0;
 const calc = (n) => {
+  let sum = 0;
   for (let i = 0; i <= n; i++) {
     sum += i;
   }
-  return sum;
+  return sum
 }
 
 const memoize = (fun) => {
